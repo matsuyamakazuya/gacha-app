@@ -4,8 +4,12 @@ class GachasController < ApplicationController
     end
 
     def index
-         @gachas = Gacha.first
-         
+         count = params['count'].to_i || 1
+         @gacha = []
+         count.times{
+            @gacha.push(Gacha.find(Gacha.pluck(:id).shuffle[0]))
+         }
+         @gachas = Gacha.all
     end
 
     def create
@@ -20,5 +24,14 @@ class GachasController < ApplicationController
     def description
         
     end
+    
+    def conform
+         @gachas = Gacha.all
+    end
+    
+    def select
+        
+    end
+    
 
 end

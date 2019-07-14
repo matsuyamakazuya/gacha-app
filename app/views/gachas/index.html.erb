@@ -1,11 +1,12 @@
 <div class="container">
 
-    <h3>ガチャ</h3>
-
-     <%=@gachas %> 
+    <h3>ガチャ結果</h3>
     
-    
-    
-    
+        <% @gacha.each do |gacha| %>
+            <a  class="btn btn-warning btn-lg btn-block">
+               <%= gacha.menu %><%= gacha.price %>円
+            </a>
+        <% end %>
+        
     
 </div>

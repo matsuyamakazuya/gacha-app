@@ -1,0 +1,13 @@
+<div class="container">
+
+    <h3>メニュー一覧</h3>    
+            <% @gachas.each do |gacha| %>
+                <div class ="col-lg-3">
+               
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><p><%= gacha.menu%> <%= gacha.price%>円</p></li>
+                    </ul>
+                </div>
+             <% end %>
+         
+</div>
