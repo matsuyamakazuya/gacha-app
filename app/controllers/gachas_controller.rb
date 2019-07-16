@@ -33,5 +33,22 @@ class GachasController < ApplicationController
         
     end
     
+    def destroy
+        gacha = Gacha.find(params["id"])
+        gacha.destroy
+        redirect_to "/"
+    end
+    
+    def edit
+       @gachas = Gacha.find(params["id"])
+    end
+    
+    def edit2
+       gacha = Gacha.find(params["id"]) 
+       gacha.menu = params["gachas"]["menu"]
+       gacha.price = params["gachas"]["price"]
+       gacha.save
+       redirect_to "/"
+    end
 
 end
