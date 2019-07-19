@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/description", to: "gachas#description"
   get "/conform", to: "gachas#conform"
   get "/select", to:"gachas#select"
-  get "/gachas/:id", to:"gachas#destroy"
+  delete "/gachas/:id", to:"gachas#destroy"
   get "/gachas/:id/edit", to:"gachas#edit"
-  patch "/gachas/:id", to:"gachas#edit2"
+  patch "/gachas/:id", to:"gachas#update"
 end

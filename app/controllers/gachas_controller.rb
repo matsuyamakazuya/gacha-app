@@ -43,7 +43,7 @@ class GachasController < ApplicationController
        @gachas = Gacha.find(params["id"])
     end
     
-    def edit2
+    def update
        gacha = Gacha.find(params["id"]) 
        gacha.menu = params["gachas"]["menu"]
        gacha.price = params["gachas"]["price"]
