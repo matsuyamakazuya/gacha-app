@@ -1,6 +1,4 @@
-<div class="container">
-
-    <h3>メニューを編集する</h3>
+<h3>メニューを編集する</h3>
     <%= form_tag("/gachas/#{@gachas.id}", :method=>:patch) do %>
         <div class="form-group">
             <%= label_tag "form-menu", "メニュー"%>
@@ -12,8 +10,3 @@
         </div>
         <%= submit_tag "送信",class:"btn btn-primary" %>
     <% end %>
-
-    
-   
-
-</div>
